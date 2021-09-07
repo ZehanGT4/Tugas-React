@@ -26,11 +26,10 @@ const DataTodoList = [
 
 
 const TodoList = () => {
-  return (
+   return (
     <>
       {DataTodoList.map(({ id, title ,completed}) => (
-        <p className="card" key={id} >{title}{completed}</p>
-
+        completed?<p className="card" key={id} >{title}</p>:<p className="card" key={id} ><s>{title}</s></p>
       ))}
     </>
   );
